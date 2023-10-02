@@ -1,0 +1,7 @@
+{
+  "_comment": "Below are data for testing purposes only.",
+  "correctemail": "dummyst01@gmail.com",
+  "correctpassword": "Android12345",
+  "incorrectemail": "notdummyst01@gmail.com",
+  "incorrectpassword": "12345Android"
+}
