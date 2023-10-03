@@ -1,6 +1,6 @@
 # MY CYPRESS PRACTICE CODE ON UNIQLO ECOMMERCE SITE
 
-# This GitHub repository contains Cypress test code for practice purposes only. 
+** This GitHub repository contains Cypress test code for practice purposes only. 
  
  
  The tests are designed to automate interactions with the UNIQLO ecommerce website.  
