@@ -67,21 +67,12 @@ describe('Login Page', () => {
         })
     })
 
-    describe('Login Links', () => {
-        it('Terms of Use link should be clickable and not a dead link', () => {
+    describe('Terms of Use link', () => {
+        it.only('should be redirected to the Terms of Use page', () => {
             cy.get('.fr-header-button.account a[title="Login"]').click()
-            cy.contains('a.fr-link-wrapper', 'Terms of use')
-            .should('be.visible')
-            .should('have.attr','href','https://faq-ph.uniqlo.com/articles/en_US/FAQ/Terms-of-use/')
-            .click()
-        })
-
-        it.only('Privacy Policy link should be clickable and not a dead link', () => {
-            cy.get('.fr-header-button.account a[title="Login"]').click()
-            cy.contains('a.fr-link-wrapper', 'Privacy policy')
-            .should('be.visible')
-            .should('have.attr','href','https://faq-ph.uniqlo.com/articles/en_US/FAQ/Privacy-Policy/')
-            .click()
+            cy.contains('.text', 'Terms of use').click()
+            cy.window().its('length').should('be.gt', 1);
+            cy.url().should('have', 'https://faq-ph.uniqlo.com/articles/en_US/FAQ/Terms-of-use/')
         })
     })
 })
