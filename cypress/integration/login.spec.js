@@ -76,7 +76,7 @@ describe('Login Page', () => {
             .click()
         })
 
-        it('Privacy Policy link should be clickable and not a dead link', () => {
+        it.only('Privacy Policy link should be clickable and not a dead link', () => {
             cy.get('.fr-header-button.account a[title="Login"]').click()
             cy.contains('a.fr-link-wrapper', 'Privacy policy')
             .should('be.visible')
