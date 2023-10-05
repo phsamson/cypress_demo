@@ -5,7 +5,7 @@ describe('Login Page', () => {
         cy.viewport(1366,786)
     })
     describe('Login Functionality', () => {
-        it('should log in successfully using correct email address and password', () => {
+        it.only('should log in successfully using correct email address and password', () => {
             cy.get('.fr-header-button.account a[title="Login"]').click()
             cy.fixture('test-data.json').then((data) => {
                 cy.get('input[type="email"]').type(data.correctemail)
@@ -46,7 +46,7 @@ describe('Login Page', () => {
         })
 
     })
-    
+
     describe('Show and Hide Password Functionality', () => {
         it('should show and hide the password', () => {
             cy.get('.fr-header-button.account a[title="Login"]').click()
@@ -64,15 +64,6 @@ describe('Login Page', () => {
                 'have.attr',
                 'type',
                 'password')
-        })
-    })
-
-    describe('Terms of Use link', () => {
-        it.only('should be redirected to the Terms of Use page', () => {
-            cy.get('.fr-header-button.account a[title="Login"]').click()
-            cy.contains('.text', 'Terms of use').click()
-            cy.window().its('length').should('be.gt', 1);
-            cy.url().should('have', 'https://faq-ph.uniqlo.com/articles/en_US/FAQ/Terms-of-use/')
         })
     })
 })

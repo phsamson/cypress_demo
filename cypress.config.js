@@ -6,7 +6,7 @@ module.exports = defineConfig({
     specPattern: 'cypress/integration/*.spec.js',
     reporter: 'mochawesome',
     reporterOptions: {
-      reportDir: 'cypress/reports',
+      reportDir: 'cypress/reports/mochawesome',
       overwrite: false
     }
   },
