@@ -5,7 +5,7 @@ describe('Login Page', () => {
         cy.viewport(1366,786)
     })
     describe('Login Functionality', () => {
-        it.only('should log in successfully using correct email address and password', () => {
+        it('should log in successfully using correct email address and password', () => {
             cy.get('.fr-header-button.account a[title="Login"]').click()
             cy.fixture('test-data.json').then((data) => {
                 cy.get('input[type="email"]').type(data.correctemail)
@@ -35,7 +35,7 @@ describe('Login Page', () => {
             cy.contains('Sorry, this does not match our records. Check the spelling and try again.').should('exist')
         })
     
-        it('should NOT log in successfully using incorrect email address and password', () => {
+        it.only('should NOT log in successfully using incorrect email address and password', () => {
             cy.get('.fr-header-button.account a[title="Login"]').click()
             cy.fixture('test-data.json').then((data) => {
                 cy.get('input[type="email"]').type(data.incorrectemail)
