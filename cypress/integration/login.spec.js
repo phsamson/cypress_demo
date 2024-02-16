@@ -66,8 +66,6 @@ describe('Login Page', () => {
                 'password')
         })
     })
-<<<<<<< HEAD
-=======
 
     describe('Terms of Use link', () => {
         it.only('should be redirected to the Terms of Use page', () => {
@@ -77,5 +75,4 @@ describe('Login Page', () => {
             cy.url().should('have', 'https://faq-ph.uniqlo.com/articles/en_US/FAQ/Terms-of-use/')
         })
     })
->>>>>>> parent of ab15515 (Revert "Revert "Update login.spec.js"")
 })
